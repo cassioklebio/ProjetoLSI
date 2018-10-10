@@ -3,53 +3,53 @@
         <hr>  
     <div class="row">
         <div class="col-md-12">
-            <form>
+            <form [formGroup]="formularioLivro" (ngSubmit)="onSubimit()">
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="inputTitulo">Titulo do Livro</label>
-                        <input type="text" class="form-control" id="inputTitulo">
+                        <input type="text" class="form-control" id="inputTitulo" formControlName="inputTitulo">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="inputSubTitulo">SubTitulo do Livro</label>
-                        <input type="text" class="form-control" id="inputSubTitulo">
+                        <input type="text" class="form-control" id="inputSubTitulo" formControlName="inputSubTitulo">
                     </div>
                 </div> 
                 <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="inputAno">Ano</label>
-                          <input type="text" class="form-control" id="inputAno">
+                          <input type="text" class="form-control" id="inputAno" formControlName="inputAno">
                         </div>
                         <div class="form-group col-md-6">
                           <label for="inputEdicao">Edição do Livro</label>
-                          <input type="text" class="form-control" id="inputEdicao">
+                          <input type="text" class="form-control" id="inputEdicao" formControlName="inputEdicao">
                         </div>
                 </div>
                 <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="inputPaginas">N° Paginas</label>
-                          <input type="text" class="form-control" id="inputPaginas">
+                          <input type="text" class="form-control" id="inputPaginas" formControlName="inputPaginas">
                         </div>
                         <div class="form-group col-md-6">
                           <label for="inputQuantidade">Quantidade</label>
-                          <input type="text" class="form-control" id="inputQuantidade">
+                          <input type="text" class="form-control" id="inputQuantidade" formControlName="inputQuantidade">
                         </div>
                 </div>
                 <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="inputEditora">Editora</label>
-                          <input type="text" class="form-control" id="inputEditora">
+                          <input type="text" class="form-control" id="inputEditora" formControlName="inputEditora">
                         </div>
                         <div class="form-group col-md-6">
                           <label for="inputISBN">ISBN</label>
-                          <input type="text" class="form-control" id="inputISBN">
+                          <input type="text" class="form-control" id="inputISBN" formControlName="inputISBN">
                         </div>
                 </div>
                 <div class="form-row">
                         <div class="form-group col-md-6">
                                 <label for="inputStatus">Status</label>
-                                <select id="inputStatus" class="form-control">
+                                <select id="inputStatus" class="form-control" formControlName="inputStatus">
                                   <option selected> </option>
                                   <option>Disponivel</option>
                                   <option>Indisponivel</option>
@@ -57,19 +57,19 @@
                         </div>
                         <div class="form-group col-md-6">
                           <label for="inputPreco">Preço</label>
-                          <input type="text" class="form-control" id="inputPreco">
+                          <input type="text" class="form-control" id="inputPreco" formControlName="inputPreco">
                         </div>
                 </div>
                 <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputFotoFile">Foto do Livro</label>
-                            <input type="file" class="form-control-file" id="inputFotoFile">
+                            <input type="file" class="form-control-file" id="inputFotoFile" formControlName="inputFotoFile">
                         </div>
                 </div>
                 <div class="form-row">
                         <div class="form-group col-md-12">
                                 <label for="inputDescricao">Descricao</label>
-                                <textarea class="form-control" id="inputDescricao" rows="3"></textarea>
+                                <textarea class="form-control" id="inputDescricao" rows="3" formControlName="inputDescricao"  ></textarea>
                         </div>
                 </div>
                 <div class="form-row">
