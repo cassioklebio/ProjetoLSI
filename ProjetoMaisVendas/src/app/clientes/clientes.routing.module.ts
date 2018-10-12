@@ -6,7 +6,7 @@ import { ClientesListaComponent } from './clientes-lista/clientes-lista.componen
 import { ClientesFormComponent } from './clientes-form/clientes-form.component';
 
 const clientesRoutes = [
-    {path: 'clientes', component: ClientesComponent},
+    {path: 'clientes', component: ClientesListaComponent},
     {path: 'clientes/novo', component: ClientesFormComponent},
     {path: 'clientes/lista',component: ClientesListaComponent},
     

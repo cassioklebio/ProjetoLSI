@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
+import { AuthService } from './login/auth.service';
+
 import { LivrosModule } from './livros/livros.module';
 import { ClientesModule } from './clientes/clientes.module';
 import { FornecedorModule } from './fornecedor/fornecedor.module';
@@ -40,7 +42,7 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     AngularFontAwesomeModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
