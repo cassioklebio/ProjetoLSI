@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   }
 
   fazerLogin(){
-    this.authService.fazerLogin(this.usuario);
+      this.authService.fazerLogin(this.usuario);
 
 
   }

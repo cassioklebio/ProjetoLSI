@@ -7,17 +7,20 @@
                     <hr>
                     <h1><i class="fas fa-user fa 5x"></i>Login</h1>
                     <hr>
-                        <form>
+                        
                             <div class="form-group">
                                 <label for="inputUsuario">Usuario </label>
-                                <input [(ngModel)]="usuario.nome"  type="text" class="form-control" id="nome">
+                                <input class="form-control" type="text" id="email" [(ngModel)]="usuario.email"  >
                             </div>
                             <div class="form-group">
                                 <label for="inputPassword">Password</label>
-                                <input [(ngModel)]="usuario.senha" type="password" class="form-control" id="senha">
+                                <input type="password" class="form-control" id="senha" [(ngModel)]="usuario.senha" >
                             </div>
-                                <button type="submit" name="action"  class="btn btn-primary" (click)="fazerLogin()"><i class="fas fa-sign-out fa 5x"></i>Entrar</button>
-                        </form>
+                            <div class="form-group">
+                                <button type="submit" name="action"  class="btn btn-primary button-assertive" (click)="fazerLogin()"><i class="fas fa-sign-out fa 5x"></i>Entrar</button>
+                            </div>
+                                
+                       
                     <hr>
                 </div>
             </div>
