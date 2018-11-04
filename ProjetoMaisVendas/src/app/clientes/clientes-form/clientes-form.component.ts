@@ -13,21 +13,26 @@ export class ClientesFormComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.configurarFormularioCliente();
+  }
+  configurarFormularioCliente() {
     this.formularioClientes = this.formBuilder.group({
-      inputNome:[null, Validators.required,Validators.minLength(10),Validators.maxLength(100)],
-      inputDataNascimento:[null, Validators.required],
-      inputCPF:[null],
-      inputMatricula:[null],
-      inputPeriodo:[null],
-      inputTelefone1:[null, Validators.required],
-      inputTelefone2:[null, Validators.required],
-      inputRua:[null],
-      inputCep:[null],
-      inputEstado:[null],
-      inputCidade:[null],
-      inputBairro:[null],
-      inputPontoReferencia:[null]
+      inputNome: [null, Validators.required, Validators.minLength(10), Validators.maxLength(100)],
+      inputDataNascimento: [null, Validators.required],
+      inputCPF: [null, Validators.required],
+      inputMatricula: [null, Validators.required],
+      inputPeriodo: [null, Validators.required],
+      inputTelefone1: [null, Validators.required],
+      inputTelefone2: [null, Validators.required],
+      inputRua: [null],
+      inputCep: [null],
+      inputEstado: [null],
+      inputCidade: [null],
+      inputBairro: [null],
+      inputPontoReferencia: [null]
     });
+  }
+  onSubmit() {
   }
 
 }

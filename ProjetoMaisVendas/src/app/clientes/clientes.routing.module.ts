@@ -8,16 +8,10 @@ import { ClientesFormComponent } from './clientes-form/clientes-form.component';
 const clientesRoutes = [
     {path: 'clientes', component: ClientesListaComponent},
     {path: 'clientes/novo', component: ClientesFormComponent},
-    {path: 'clientes/lista',component: ClientesListaComponent},
-    
-    
-
-];
+    {path: 'clientes/lista', component: ClientesListaComponent}];
 
 @NgModule({
-    imports:[RouterModule.forChild(clientesRoutes)],
-    exports:[RouterModule] 
+    imports: [ RouterModule.forChild(clientesRoutes)],
+    exports: [RouterModule]
 })
-
-
 export class ClientesRoutingModule {}

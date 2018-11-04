@@ -27,64 +27,28 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th >1</th>
+        <tr *ngFor="let livro of livros">
+          <th >{{livro.id}}</th>
           <td><figure>
-            <img class="materialboxed"  src="/src/assets/livros/livro01.jpg" width="40px" height="40px">
+            <img class="materialboxed"  src="{{livro.foto}}" width="40px" height="40px">
        </figure></td>
-          <td>Roube Como Um Artista. O Diário (Português) Capa Comum – 8 nov 2015</td>
-          <td>R$ 25.00</td>
-          <td><i class="far fa-edit"></i></td>
-          <td><i class="fas fa-print"></i></td>
-          <td><i class="fas fa-trash"></i></td>
+          <td>{{livro.titulo}}</td>
+          <td>{{livro.preco}}</td>
+          <td><button type="button" class="btn btn-outline-primary btn-sm"><i class="far fa-edit"></i></button> </td>
+          <td><button type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-print"></i></button></td>
+          <td><button type="button" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></button></td>
           
-        </tr>
-        <tr>
-          <th >2</th>
-          <td><figure>
-            <img class="materialboxed"  src="/src/assets/livros/Informática.jpg" width="40px" height="40px">
-       </figure></td>
-          <td>Informática Para Concursos. Teoria e Questões - Série Provas & Concursos 1 dez 2016</td>
-          <td>R$ 94.00</td>
-          <td><i class="far fa-edit"></i></td>
-          <td><i class="fas fa-print"></i></td>
-          <td><i class="fas fa-trash"></i></td>
-          
-        </tr>
-        <tr>
-          <th >3</th>
-          <td><figure>
-            <img class="materialboxed"  src="/src/assets/livros/JavaScript.jpg" width="40px" height="40px">
-       </figure></td>
-          <td>JavaScript and HTML5 Now 30 jun 2012</td>
-          <td>R$ 67.00</td>
-          <td><i class="far fa-edit"></i></td>
-          <td><i class="fas fa-print"></i></td>
-          <td><i class="fas fa-trash"></i></td>
-        </tr>
-        <tr>
-          <th >4</th>
-          <td><figure>
-            <img class="materialboxed"  src="/src/assets/livros/java 8.jpg" width="40px" height="40px">
-       </figure></td>
-          <td>Java 8 Preview Sampler</td>
-          <td>R$ 71.00</td>
-          <td><i class="far fa-edit"></i></td>
-          <td><i class="fas fa-print"></i></td>
-          <td><i class="fas fa-trash"></i></td>
-        </tr>
-        <tr>
-          <th >5</th>
-          <td><figure>
-            <img class="materialboxed"  src="/src/assets/livros/wordpress.jpg" width="40px" height="40px">
-       </figure></td>
-          <td>Manual do Usuário Wordpress 2 ago 2015</td>
-          <td>R$ 109.00</td>
-          <td><i class="far fa-edit"></i></td>
-          <td><i class="fas fa-print"></i></td>
-          <td><i class="fas fa-trash"></i></td>
         </tr>
       </tbody>
+      <tfoot>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </tfoot>
     </table>
   </div>
 </div>

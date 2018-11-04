@@ -14,40 +14,27 @@ export class LivrosFormComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-
-    this.formularioLivro = new FormGroup({
-      inputTitulo: new FormControl(null,[Validators.required,Validators.minLength(10),Validators.maxLength(100)]),
-      inputSubTituloail: new FormControl(null,[Validators.required,Validators.minLength(10),Validators.maxLength(100)]),
-      inputAno: new FormControl(null,Validators.required),
-      inputEdicao:new FormControl(null,Validators.required),
-      inputPaginas: new FormControl(null,Validators.required),
-      inputQuantidade: new FormControl(null, Validators.required),
-      inputEditora: new FormControl(null, Validators.required),
-      inputISBN: new FormControl(null, Validators.required),
-      inputStatus:new FormControl(null, Validators.required),
-      inputPreco: new FormControl(null, Validators.required),
-      inputFotoFile: new FormControl(null, Validators.required),
-      inputDescricao: new FormControl(null,[Validators.required,Validators.minLength(30),Validators.maxLength(200)])
+    this.configurarFormularioLivro();
+  }
+  configurarFormularioLivro() {
+    this.formularioLivro = this.formBuilder.group({
+      inputTitulo: [null, Validators.required],
+      eminputSubTitulo: [null, Validators.required],
+      inputAno: [null, Validators.required],
+      inputEdicao: [null, Validators.required],
+      inputPaginas: [null, Validators.required],
+      inputQuantidade: [null, Validators.required],
+      inputEditora: [null, Validators.required],
+      inputISBN: [null, Validators.required],
+      inputStatus: [null, Validators.required],
+      inputPreco: [null, Validators.required],
+      inputFotoFile: [null, Validators.required],
+      inputDescricao: [null, Validators.required]
     });
-
-    /*this.formularioLivros = this.formBuilder.group({
-      inputTitulo: [null],
-      eminputSubTituloail: [null],
-      inputAno: [null],
-      inputEdicao: [null],
-      inputPaginas: [null],
-      inputQuantidade: [null],
-      inputEditora: [null],
-      inputISBN: [null],
-      inputStatus:[null],
-      inputPreco:[null],
-      inputFotoFile:[null],
-      inputDescricao:[null]
-    });*/
   }
 
-  onSubimit(){
-    console.log(this.formularioLivro);
+  onSubimit() {
+    console.log(this.configurarFormularioLivro);
   }
 
 }

@@ -27,70 +27,24 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th >1</th>
-                <td>Cássio Klebio Pereira Lins</td>
-                <td>Sistema de Infromação</td>
-                <td><i class="far fa-edit"></i></td>
-                <td><i class="fas fa-print"></i></td>
-                <td><i class="fas fa-trash"></i></td>
-                
-              </tr>
-              <tr>
-                <th >2</th>
-                <td>Fulano fulano fulano fulano</td>
-                <td>Farmacia</td>
-                <td><i class="far fa-edit"></i></td>
-                <td><i class="fas fa-print"></i></td>
-                <td><i class="fas fa-trash"></i></td>
-                
-              </tr>
-              <tr>
-                <th >3</th>
-                <td>Fulano fulano fulano fulano</td>
-                <td>Medicina</td>
-                <td><i class="far fa-edit"></i></td>
-                <td><i class="fas fa-print"></i></td>
-                <td><i class="fas fa-trash"></i></td>
-                
-              </tr>
-              <tr>
-                <th >4</th>
-                <td>Fulano fulano fulano fulano</td>
-                <td>Jogos Digitais</td>
-                <td><i class="far fa-edit"></i></td>
-                <td><i class="fas fa-print"></i></td>
-                <td><i class="fas fa-trash"></i></td>
-                
-              </tr>
-              <tr>
-                <th >5</th>
-                <td>Fulano fulano fulano fulano</td>
-                <td>Sistema de Infromação</td>
-                <td><i class="far fa-edit"></i></td>
-                <td><i class="fas fa-print"></i></td>
-                <td><i class="fas fa-trash"></i></td>
-                
-              </tr>
-              <tr>
-                <th >6</th>
-                <td>Fulano fulano fulano fulano</td>
-                <td>Direito</td>
-                <td><i class="far fa-edit"></i></td>
-                <td><i class="fas fa-print"></i></td>
-                <td><i class="fas fa-trash"></i></td>
-                
-              </tr>
-              <tr>
-                <th >7</th>
-                <td>Fulano fulano fulano fulano</td>
-                <td>Direito</td>
-                <td><i class="far fa-edit"></i></td>
-                <td><i class="fas fa-print"></i></td>
-                <td><i class="fas fa-trash"></i></td>
-                
+              <tr *ngFor= "let cliente of clientes">
+                <th >{{cliente.id}}</th>
+                <td>{{cliente.nome}}</td>
+                <td>{{cliente.curso}}</td>
+                <td><button type="button" class="btn btn-outline-primary btn-sm"><i class="far fa-edit"></i></button> </td>
+          <td><button type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-print"></i></button></td>
+          <td><button type="button" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></button></td>
               </tr>
             </tbody>
+            <tfoot>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </tfoot>
           </table>
         </div>
       </div>

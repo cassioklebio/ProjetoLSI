@@ -1,9 +1,10 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-
+import { VendasRoutingModule } from './vendas.routing.module';
 import { VendasComponent } from './vendas.component';
 import { VendasListaComponent } from './vendas-lista/vendas-lista.component';
 import { VendasFormComponent } from './vendas-form/vendas-form.component';
@@ -11,11 +12,13 @@ import { VendasDetalheComponent } from './vendas-detalhe/vendas-detalhe.componen
 import { VendasService } from './vendas.service';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    VendasRoutingModule
 
   ],
   declarations: [
@@ -24,7 +27,5 @@ import { VendasService } from './vendas.service';
     VendasFormComponent,
     VendasDetalheComponent
   ],
-  providers:[VendasService]
-  
-})
+  providers: [VendasService]})
 export class VendasModule { }

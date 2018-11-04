@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Mais<span>Venda</span></a>
+<nav *ngIf="mostrarMenu"  class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><i class="fab fa-accusoft 7x"></i>Mais<span>Venda</span></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -21,9 +21,25 @@
       <li routerLinkActive="active">
         <a class="nav-link" routerLink="relatorios">Relatorios <span class="sr-only">(current)</span></a>
       </li>
+      
+        
     </ul>
+    <ul class="navbar-nav">
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user fa 5x"> </i>Mome do usuario logado
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item"><i class="fas fa-cogs"></i>..Perfil</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item"> <i class="fas fa-sign-out-alt"></i>Sair</a>
+        </div>
+      </li>
+    </ul>  
+    
     
   </div>
+  
 </nav>
 
 <div class="container-fluid">

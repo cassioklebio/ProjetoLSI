@@ -6,7 +6,7 @@
             <form [formGroup]="formularioLivro" (ngSubmit)="onSubimit()">
                 <div class="form-row">
                     <div class="form-group col-md-12">
-                        <label for="inputTitulo">Titulo do Livro</label>
+                        <label for="inputng Titulo">Titulo do Livro</label>
                         <input type="text" class="form-control" id="inputTitulo" formControlName="inputTitulo">
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="form-row">
                         <div class="form-group col-md-6">
-                            <button type="submit" class="btn btn-primary"><i class="fas fa-sign-out-alt 3x"></i>Salvar</button>
+                            <button type="submit" class="btn btn-primary" [disabled]="formularioLivro.invalid"><i class="fas fa-sign-out-alt 3x"></i>Salvar</button>
                         </div>
                 </div>
             </form>

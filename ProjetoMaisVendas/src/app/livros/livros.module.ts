@@ -20,8 +20,7 @@ import { LivrosService } from './livros.service';
     RouterModule,
     LivrosRoutingModule
   ],
-  
-  declarations: [ 
+  declarations: [
     LivrosComponent,
     LivrosDetalheComponent,
     LivrosListaComponent,
