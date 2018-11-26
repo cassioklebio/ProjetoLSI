@@ -5,7 +5,7 @@ import { NgModule, Optional } from '@angular/core';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AuthService } from './login/auth.service';
-import { TextMaskModule } from 'angular2-text-mask';
+
 
 
 import { LivrosModule } from './livros/livros.module';
@@ -28,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
     ],
     imports: [
     BrowserModule,

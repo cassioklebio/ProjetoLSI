@@ -14,12 +14,9 @@ export class LivrosFormComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.configurarFormularioLivro();
-  }
-  configurarFormularioLivro() {
     this.formularioLivro = this.formBuilder.group({
-      inputTitulo: [null, Validators.required],
-      eminputSubTitulo: [null, Validators.required],
+      inputTitulo: [null, Validators.required, Validators.minLength(10), Validators.maxLength(100)],
+      inputSubTitulo: [null, Validators.required],
       inputAno: [null, Validators.required],
       inputEdicao: [null, Validators.required],
       inputPaginas: [null, Validators.required],
@@ -32,9 +29,8 @@ export class LivrosFormComponent implements OnInit {
       inputDescricao: [null, Validators.required]
     });
   }
-
   onSubimit() {
-    console.log(this.configurarFormularioLivro);
+    console.log(this.formularioLivro);
   }
 
 }

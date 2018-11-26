@@ -4,11 +4,12 @@
 <div class="row">
   
   <div class="col-md-12">
-      <form [formGroup]="formularioCliente" (ngSubmit)="onSubimit()">
-          <div class="form-row">
-              <div class="form-group col-md-12">
+      <form [formGroup]="formularioClientes" (ngSubmit)="onSubimit()">
+          <div class="form-row ">
+              <div class="form-group col-md-12" [ngClass]="aplicaCssErro('inputNome')">
                   <label for="inputNome">Nome</label>
                   <input type="text" class="form-control" id="inputNome" formControlName="inputNome">
+                  
               </div>
           </div>
           <div class="form-row">
@@ -17,124 +18,76 @@
                   <input type="text" class="form-control" id="inputDataNascimento"formControlName="inputDataNascimento">
                   
               </div>
-              <div class="form-group col-md-6">
+              <div class=" col-md-6">
                 <label for="inputCPF">CPF</label>
                 <input type="text" class="form-control" id="inputCPF" formControlName="inputCPF">
               </div>
           </div> 
           <div class="form-row">
-                  <div class="form-group col-md-6">
+                  <div class=" col-md-6">
                     <label for="inputMatricula">Matricula</label>
                     <input type="text" class="form-control" id="inputMatricula" formControlName="inputMatricula">
                   </div>
-                  <div class="form-group col-md-6">
+                  <div class=" col-md-6">
                     <label for="inputPeriodo">Período</label>
                     <input type="text" class="form-control" id="inputPeriodo" formControlName="inputPeriodo">
                   </div>
           </div>
           <div class="form-row">
-                  <div class="form-group col-md-6">
+                  <div class=" col-md-6">
                     <label for="inputTelefone1">Telefone 1</label>
                     <input type="text" class="form-control" id="inputTelefone1" formControlName="inputTelefone1">
                   </div>
-                  <div class="form-group col-md-6">
+                  <div class=" col-md-6">
                     <label for="inputTelefone2">Telefone 2</label>
                     <input type="text" class="form-control" id="inputTelefone2" formControlName="inputTelefone2">
                   </div>
           </div>
-          <h5>Endereço</h5>
-          <hr>
+          <hr class="my-4">
+          <h4>Endereço</h4>
+          <hr class="my-4">
           <div class="form-row">
-                  <div class="form-group col-md-9">
+              <div class=" col-md-3">
+                  <label for="inputCep">CEP</label>
+                  <input type="text" class="form-control" id="inputCep" formControlName="inputCep">
+                </div>
+                  <div class=" col-md-9">
                     <label for="inputRua">Rua</label>
                     <input type="text" class="form-control" id="inputRua" formControlName="inputRua">
                   </div>
-                  <div class="form-group col-md-3">
-                    <label for="inputCep">CEP</label>
-                    <input type="text" class="form-control" id="inputCep" formControlName="inputCep">
-                  </div>
           </div>
           <div class="form-row">
-                  <div class="form-group col-md-6">
-                          <label for="inputEstado">Estado</label>
-                          <select id="inputEstado" class="form-control" formControlName="inputEstado">
+                  <div class=" col-md-6">
+                          <label for="estado">Estado</label>
+                          <select id="estado" class="form-control" formControlName="estado">
                             <option selected> </option>
-                            <option selected> </option>
-                                    <option value="1">Acre</option>
-                                    <option value="2">Alagoas</option>
-                                    <option value="3">Amapá</option>
-                                    <option value="3">Amazonas</option>
-                                    <option value="3">Bahia</option>
-                                    <option value="3">Ceará</option>
-                                    <option value="3">Distrito Federal</option>
-                                    <option value="3">Espríto Santo</option>
-                                    <option value="3">Goiás</option>
-                                    <option value="3">Maranhão</option>
-                                    <option value="3">Mato Grosso</option>
-                                    <option value="3">Mato Grosso do Sul</option>
-                                    <option value="3">Minas Gerais</option>
-                                    <option value="3">Pará</option>
-                                    <option value="3">Paraíba</option>
-                                    <option value="3">Paraná</option>
-                                    <option value="3">Pernambuco</option>
-                                    <option value="3">Piauí</option>
-                                    <option value="3">Rio de Janeiro</option>
-                                    <option value="3">Rio Grande do Norte</option>
-                                    <option value="3">Rio Grande do Sul</option>
-                                    <option value="3">Rondônia</option>
-                                    <option value="3">Santa Cantarina</option>
-                                    <option value="3">São Paulo</option>
-                                    <option value="3">Sergipe</option>
-                                    <option value="3">Tocantins</option>
+                            <option *ngFor="let estado of estados" [value]="estado.sigla">{{estado.nome}}</option>
+                            
                           </select>
                   </div>
-                  <div class="form-group col-md-6">
+                  <div class=" col-md-6">
                     <label for="inputCidade">Cidade</label>
                     <select id="inputCidade" class="form-control" formControlName="inputCidade">
-                      <option selected> </option>
-                      <option selected> </option>
-                              <option value="1">Acre</option>
-                              <option value="2">Alagoas</option>
-                              <option value="3">Amapá</option>
-                              <option value="3">Amazonas</option>
-                              <option value="3">Bahia</option>
-                              <option value="3">Ceará</option>
-                              <option value="3">Distrito Federal</option>
-                              <option value="3">Espríto Santo</option>
-                              <option value="3">Goiás</option>
-                              <option value="3">Maranhão</option>
-                              <option value="3">Mato Grosso</option>
-                              <option value="3">Mato Grosso do Sul</option>
-                              <option value="3">Minas Gerais</option>
-                              <option value="3">Pará</option>
-                              <option value="3">Paraíba</option>
-                              <option value="3">Paraná</option>
-                              <option value="3">Pernambuco</option>
-                              <option value="3">Piauí</option>
-                              <option value="3">Rio de Janeiro</option>
-                              <option value="3">Rio Grande do Norte</option>
-                              <option value="3">Rio Grande do Sul</option>
-                              <option value="3">Rondônia</option>
-                              <option value="3">Santa Cantarina</option>
-                              <option value="3">São Paulo</option>
-                              <option value="3">Sergipe</option>
-                              <option value="3">Tocantins</option>
+                             <option selected> </option>
+                             <option  *ngFor = "let cidade of cidades"  [value] ="cidade.nome "> {{cidade.nome}} </option>
+                              
                     </select>
             </div>
           </div>
           <div class="form-row">
-            <div class="form-group col-md-3">
+            <div class=" col-md-3">
               <label for="inputBairro">Bairro</label>
               <input type="text" class="form-control" id="inputBairro" formControlName="inputBairro">
             </div>
-            <div class="form-group col-md-9">
+            <div class=" col-md-9">
               <label for="inputPontoReferencia">Ponto de Referencia</label>
               <input type="text" class="form-control" id="inputPontoReferencia" formControlName="inputPontoReferencia">
             </div>
     </div>
+    <br>
           <div class="form-row">
-                  <div class="form-group col-md-6">
-                      <button type="submit" class="btn btn-primary"><i class="fas fa-sign-out-alt 3x"></i>Salvar</button>
+                  <div class=" col-md-6">
+                      <button type="submit" class="btn btn-primary"[disabled]="formularioClientes.invalid"><i class="fas fa-sign-out-alt 3x"></i>Salvar</button>
                   </div>
           </div>
       </form>

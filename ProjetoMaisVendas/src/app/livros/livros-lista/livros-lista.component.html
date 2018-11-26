@@ -32,8 +32,8 @@
           <td><figure>
             <img class="materialboxed"  src="{{livro.foto}}" width="40px" height="40px">
        </figure></td>
-          <td>{{livro.titulo}}</td>
-          <td>{{livro.preco}}</td>
+          <td>{{livro.titulo | uppercase}}</td>
+          <td>{{livro.preco | currency:'BRL': true }}</td>
           <td><button type="button" class="btn btn-outline-primary btn-sm"><i class="far fa-edit"></i></button> </td>
           <td><button type="button" class="btn btn-outline-primary btn-sm"><i class="fas fa-print"></i></button></td>
           <td><button type="button" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></button></td>

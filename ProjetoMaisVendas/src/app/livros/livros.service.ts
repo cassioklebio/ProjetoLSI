@@ -8,11 +8,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LivrosService {
 
+  private readonly API = 'http://localhost:3000/livros';
+
 constructor(private http: HttpClient) { }
 
 /*listar os livros cadastrados*/
 list() {
-  return null;
+  return this.http.get<Livro[]>(this.API);
 
 }
 /*metodo para salvar */
